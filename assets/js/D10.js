@@ -152,22 +152,23 @@ function onlyLetters(stringa) {
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+console.log("Soluzione esercizio 6")
 
-function isThisAnEmail (stringa) {
-  if (stringa.indexOf('@') === -1 || stringa.indexOf('.') === -1) {
-  return false;
-}
+function isThisAnEmail(stringa) {
+  if (stringa.indexOf("@") === -1 || stringa.indexOf(".") === -1) {
+    return false;
+  }
 
-if (stringa.indexOf('@') !== stringa.lastIndexOf('@')) {
-  return false;
-}
+  if (stringa.indexOf("@") !== stringa.lastIndexOf("@")) {
+    return false;
+  }
 
-let domEmail = stringa.split('@')[1];
-if (domEmail.indexOf('.') === -1) {
-  return false;
-}
+  let domEmail = stringa.split("@")[1];
+  if (domEmail.indexOf(".") === -1) {
+    return false;
+  }
 
-return true;
+  return true;
 };
 
 console.log(isThisAnEmail("michelepaolorenzi@gmail.com"));
@@ -178,16 +179,16 @@ console.log(isThisAnEmail("michelepaolorenzi@gmailit"));
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+console.log("Soluzione esercizio 7")
 
 function whatDayIsIt {
   let oggi = new Date();
-  let giorniSett = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Vnerdì","Sabato"];
-let getOggi = oggi.getDay();
-return giorniSett(getOggi);
+  let giorniSett = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Vnerdì", "Sabato"];
+  let getOggi = oggi.getDay();
+  return giorniSett(getOggi);
 };
 
-console.log (whatDayIsIt())
-
+console.log(whatDayIsIt())
 
 
 /* ESERCIZIO 8
@@ -258,10 +259,22 @@ console.log (whatDayIsIt())
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+console.log("Soluzione esercizio 20")
+
+function selettoreId() {
+  let idContainer = document.getElementById('container');
+};
+
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+console.log("Soluzione esercizio 21")
+
+function selettoreTag() {
+  let tagTd = document.getElementsByTagName("td");
+};
+
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
