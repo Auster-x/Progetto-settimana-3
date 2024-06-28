@@ -83,17 +83,27 @@ console.log(me);
 console.log("Soluzione esercizio 1")
 
 function dice() {
-  return Math.floor(Math.random() * 6) +1;
+  return Math.floor(Math.random() * 6) + 1;
 };
 
 let diceSpin = dice();
-console.log (diceSpin)
+console.log(diceSpin)
 
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 console.log("Soluzione esercizio 2")
+
+function whoIsBigger(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+
+console.log(whoIsBigger(2, 17));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -102,11 +112,31 @@ console.log("Soluzione esercizio 2")
 */
 console.log("Soluzione esercizio 3")
 
+function splitMe(stringa) {
+  return stringa.split(" ");
+};
+
+console.log(splitMe("Esercizio 3 concluso"));
+
+
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 console.log("Soluzione esercizio 4")
+
+function deleteOne(stringa, boolNum) {
+  if (boolNum === true) {
+    return stringa.substring(1)
+  }
+  else {
+    return stringa.substring(0, stringa.length - 1);
+  }
+}
+
+console.log(deleteOne("Lorem Ipsum", true));
+console.log(deleteOne("Lorem Ipsum", false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -115,13 +145,50 @@ console.log("Soluzione esercizio 4")
 */
 console.log("Soluzione esercizio 5")
 
+function onlyLetters(stringa) {
+  return stringa.replace( , " ");
+}
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+function isThisAnEmail (stringa) {
+  if (stringa.indexOf('@') === -1 || stringa.indexOf('.') === -1) {
+  return false;
+}
+
+if (stringa.indexOf('@') !== stringa.lastIndexOf('@')) {
+  return false;
+}
+
+let domEmail = stringa.split('@')[1];
+if (domEmail.indexOf('.') === -1) {
+  return false;
+}
+
+return true;
+};
+
+console.log(isThisAnEmail("michelepaolorenzi@gmail.com"));
+console.log(isThisAnEmail("michelepaolorenzi-gmail"));
+console.log(isThisAnEmail("michelepaolorenzi@gmailit"));
+
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+function whatDayIsIt {
+  let oggi = new Date();
+  let giorniSett = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Vnerdì","Sabato"];
+let getOggi = oggi.getDay();
+return giorniSett(getOggi);
+};
+
+console.log (whatDayIsIt())
+
+
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
