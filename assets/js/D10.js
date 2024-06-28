@@ -146,7 +146,7 @@ console.log(deleteOne("Lorem Ipsum", false));
 console.log("Soluzione esercizio 5")
 
 function onlyLetters(stringa) {
-  return stringa.replace( , " ");
+  // return stringa.replace( , " "); mi sono bloccato
 }
 
 /* ESERCIZIO 6
@@ -181,7 +181,7 @@ console.log(isThisAnEmail("michelepaolorenzi@gmailit"));
 */
 console.log("Soluzione esercizio 7")
 
-function whatDayIsIt {
+function whatDayIsIt() {
   let oggi = new Date();
   let giorniSett = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Vnerdì", "Sabato"];
   let getOggi = oggi.getDay();
@@ -283,6 +283,15 @@ function selettoreTag() {
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+console.log("Soluzione esercizio 23")
+
+function addRedBack () {
+  const links = document.getElementsByTagName("a");
+  for (let i= 0; i < links.length; i++) {
+    links[i].style.backgroundColor = "red";
+  };
+};
+
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
